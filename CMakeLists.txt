@@ -33,7 +33,7 @@ make_fat(bsm.0)
 target_link_libraries(bsm.0 system)
 
 install(TARGETS bsm.0 DESTINATION libexec/darling/usr/lib)
-InstallSymlink(libbsm.0.dylib libexec/darling/usr/lib/libbsm.dylib)
+InstallSymlink(libbsm.0.dylib ${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/lib/libbsm.dylib)
 
 install(FILES
 	openbsm/libbsm/au_class.3

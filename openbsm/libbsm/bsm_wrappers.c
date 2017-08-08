@@ -487,6 +487,11 @@ audit_token_to_au32(audit_token_t atoken, uid_t *auidp, uid_t *euidp,
 		tidp->port = (dev_t)atoken.val[7];
 	}
 }
+
+pid_t audit_token_to_pid(audit_token_t atoken)
+{
+	return atoken.val[5];
+}
 #endif /* !__APPLE__ */
 
 int

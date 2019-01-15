@@ -28,6 +28,8 @@ add_darling_library(bsm.0 SHARED
 	openbsm/libbsm/bsm_wrappers.c
 	openbsm/libbsm/bsm_errno.c
 	openbsm/libbsm/bsm_fcntl.c
+
+	stub.c
 )
 make_fat(bsm.0)
 target_link_libraries(bsm.0 system)

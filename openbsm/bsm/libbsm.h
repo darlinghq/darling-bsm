@@ -1268,6 +1268,8 @@ void audit_token_to_au32(
 	pid_t		*pidp,
 	au_asid_t	*asidp,
 	au_tid_t	*tidp);
+
+pid_t audit_token_to_pid(audit_token_t atoken);
 #endif /* !__APPLE__ */
 
 /*

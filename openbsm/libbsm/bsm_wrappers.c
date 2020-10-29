@@ -488,9 +488,39 @@ audit_token_to_au32(audit_token_t atoken, uid_t *auidp, uid_t *euidp,
 	}
 }
 
+uid_t audit_token_to_auid(audit_token_t atoken)
+{
+	return atoken.val[0];
+}
+
+uid_t audit_token_to_euid(audit_token_t atoken)
+{
+	return atoken.val[1];
+}
+
+gid_t audit_token_to_egid(audit_token_t atoken)
+{
+	return atoken.val[2];
+}
+
+uid_t audit_token_to_ruid(audit_token_t atoken)
+{
+	return atoken.val[3];
+}
+
+gid_t audit_token_to_rgid(audit_token_t atoken)
+{
+	return atoken.val[4];
+}
+
 pid_t audit_token_to_pid(audit_token_t atoken)
 {
 	return atoken.val[5];
+}
+
+au_asid_t audit_token_to_asid(audit_token_t atoken)
+{
+	return atoken.val[6];
 }
 #endif /* !__APPLE__ */
 

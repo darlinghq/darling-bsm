@@ -51,7 +51,7 @@ au_sdev_handle_t* au_sdev_open(int flags) {
 
 	// we're just a stub; we don't actually open an fd, so let's keep our flags there
 	// we'll use it later on to determine whether to be blocking or not
-	ash->ash_fp = (uintptr_t)flags;
+	ash->ash_fp = (FILE *)flags;
 
 	return ash;
 };

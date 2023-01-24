@@ -13,6 +13,11 @@ int audit_token_to_pidversion(audit_token_t atoken)
 	return 0;
 }
 
+int au_sdev_close(au_sdev_handle_t *dev) {
+	STUB();
+	return 0;
+}
+
 int au_sdev_read_aia(au_sdev_handle_t* ash, int* event, auditinfo_addr_t* aia_p) {
 	if (!ash || !event || !aia_p) {
 		// i'm assuming this is what we should return
